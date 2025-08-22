@@ -1,0 +1,24 @@
+=== Singularity / Regime-Shift Analyzer ===
+Generated at: 2025-08-22 11:26:38.965010
+
+Data points: n=60
+Time range: [0.0 .. 59.0]
+
+Model comparison (lower is better):
+- exponential: RSS=30330.2, AIC=377.533, BIC=381.722, params: A=13.1, b=0.04351
+- logistic: RSS=4801.33, AIC=268.938, BIC=275.221, params: K=109.9, r=0.12, c=12.92
+- hyperbolic: RSS=7.49017, AIC=-118.845, BIC=-112.562, params: C=1.325e+15, alpha=6.209, tstar=177
+
+Best model by BIC/AIC: hyperbolic
+Estimated t* (finite-time): 177
+Alpha: 6.20914; C: 1.32478e+15
+Note: Real systems often bend to logistic before reaching t*.
+
+Structural break (two-segment OLS on ln X ~ t):
+- Best split index k=27 at time≈27.0, improvement in RSS=5.71854
+
+Early-warning (rolling on g(t)):
+- Window size: 15
+- Last lag-1 autocorr: -0.216
+- Last variance: 0.0002022
+Rising autocorr/variance may indicate approaching tipping.
